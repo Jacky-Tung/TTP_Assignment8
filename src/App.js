@@ -34,7 +34,7 @@ function App() {
     const fetchGifs = async () => {
       try {
         const res = await axios.get(
-          `http://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=rI36MmIAU2YqEuB0GMDS63VcjSqugDDr`
+          `https://api.giphy.com/v1/gifs/search?q=${searchInput}&api_key=rI36MmIAU2YqEuB0GMDS63VcjSqugDDr`
         );
         setGifs(res.data.data);
         setUnFilteredGifs(res.data.data);
@@ -47,7 +47,7 @@ function App() {
     const fetchTrendingGifs = async () => {
       try {
         const res = await axios.get(
-          `http://api.giphy.com/v1/gifs/trending?api_key=rI36MmIAU2YqEuB0GMDS63VcjSqugDDr`
+          `https://api.giphy.com/v1/gifs/trending?api_key=rI36MmIAU2YqEuB0GMDS63VcjSqugDDr`
         );
         setGifs(res.data.data);
         setUnFilteredGifs(res.data.data);
@@ -60,7 +60,7 @@ function App() {
     const fetchRandomGif = async () => {
       try {
         const res = await axios.get(
-          `http://api.giphy.com/v1/gifs/random?api_key=rI36MmIAU2YqEuB0GMDS63VcjSqugDDr`
+          `https://api.giphy.com/v1/gifs/random?api_key=rI36MmIAU2YqEuB0GMDS63VcjSqugDDr`
         );
         setRandomGif(res.data.data);
         console.log(res.data.data);
